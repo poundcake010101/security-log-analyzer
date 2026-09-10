@@ -1,0 +1,60 @@
+SECURITY LOG ANALYSIS REPORT
+============================
+
+LOGIN SUMMARY
+-------------
+Successful logins: 5
+Failed logins: 11
+
+INCIDENT SUMMARY
+----------------
+Multiple failed login attempts were detected against user accounts.
+Some attempts occurred rapidly and exceeded the configured detection threshold.
+The activity may indicate a brute-force or password-guessing attempt.
+Further investigation is recommended to determine whether any account was compromised.
+
+FAILED ATTEMPTS BY IP
+---------------------
+192.168.1.50: 4
+10.0.0.25: 2
+203.0.113.45: 5
+
+FAILED ATTEMPTS BY USERNAME
+---------------------------
+admin: 9
+guest: 2
+
+SUSPICIOUS ACTIVITY
+-------------------
+ALERT
+IP Address: 192.168.1.50
+Target Account: admin
+Failed Attempts: 4
+First Attempt: 2026-09-10 08:07:21
+Last Attempt: 2026-09-10 08:07:31
+Attack Duration: 0:00:10
+Attack Type: Rapid Login Attack
+Severity: HIGH
+RECOMMENDED ACTION
+------------------
+- Investigate the source IP address.
+- Review authentication logs for additional activity.
+- Verify whether the targeted account was compromised.
+- Consider blocking the source IP if the activity is confirmed malicious.
+
+ALERT
+IP Address: 203.0.113.45
+Target Account: admin
+Failed Attempts: 5
+First Attempt: 2026-09-10 08:32:17
+Last Attempt: 2026-09-10 08:32:28
+Attack Duration: 0:00:11
+Attack Type: Rapid Login Attack
+Severity: HIGH
+RECOMMENDED ACTION
+------------------
+- Investigate the source IP address.
+- Review authentication logs for additional activity.
+- Verify whether the targeted account was compromised.
+- Consider blocking the source IP if the activity is confirmed malicious.
+
